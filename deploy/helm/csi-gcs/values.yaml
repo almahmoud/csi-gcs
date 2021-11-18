@@ -24,7 +24,9 @@ images:
     tag: latest
   
 driverName: gcs.csi.ofek.dev
-priorityClass: system-node-critical
+priorityClass:
+  create: true
+  name: priorityclass-gcs
 
 serviceAccount:
   # Specifies whether a service account should be created

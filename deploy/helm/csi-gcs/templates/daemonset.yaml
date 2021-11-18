@@ -15,7 +15,7 @@ spec:
       nodeSelector:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      priorityClassName: {{ .Values.priorityClass }}
+      priorityClassName: {{ include "csi-gcs.priorityClassName" . }}
       tolerations:
       - operator: "Exists"
       hostNetwork: true
